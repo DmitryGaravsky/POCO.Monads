@@ -7,8 +7,8 @@
     <ProjectGuid>{28191F1D-5478-4CF5-A37E-D4352B38BD6F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Monads.Tests</RootNamespace>
-    <AssemblyName>Monads.Tests</AssemblyName>
+    <RootNamespace>POCO.Monads.Tests</RootNamespace>
+    <AssemblyName>POCO.Monads.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>
@@ -45,7 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Monads\POCO.Monads.csproj">
+    <ProjectReference Include="..\POCO.Monads\POCO.Monads.csproj">
       <Project>{b26d7309-1288-4d37-9427-4c63e7796e46}</Project>
       <Name>POCO.Monads</Name>
     </ProjectReference>
