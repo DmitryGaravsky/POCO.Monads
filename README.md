@@ -7,7 +7,7 @@ public class Foo {
         set; 
     }
     public void Greet() {
-        Console.WriteLine(Name);
+        Console.WriteLine("Hello, I'm " + Name);
     }
 }
 ```
@@ -32,4 +32,25 @@ class Foo {
         this.RaiseCanExecuteChanged(() => Greet());
     }
 }
+```
+
+
+## @Intercept
+
+```cs
+class Bar {
+    public void Greet() {
+        Console.WriteLine("Hello, I'm Bar!!!");
+    }
+}
+
+var method = typeof(Foo).GetMethod("GetName");
+var replacement = typeof(Bar).GetMethod("GetName");
+
+Foo foo = new Foo();
+foo.Greet(); // "Hello, I'm Foo
+using(method.@Intercept(replacement)) {
+    foo.Greet(); // "Hello, I'm Bar!!!   
+}
+
 ```

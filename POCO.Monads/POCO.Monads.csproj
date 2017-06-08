@@ -37,6 +37,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aspects\Intercept.cs" />
+    <Compile Include="Internal\ExpressionHelper.cs" />
+    <Compile Include="Internal\RuntimeMethodHelper.cs" />
     <Compile Include="Expressions\PropertyName.cs" />
     <Compile Include="MayBe\Action.cs" />
     <Compile Include="MayBe\Function.cs" />

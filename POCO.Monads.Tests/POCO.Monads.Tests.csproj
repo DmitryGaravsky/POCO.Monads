@@ -38,6 +38,7 @@
     <Reference Include="nunit.framework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aspects\Intercept.cs" />
     <Compile Include="Expressions\Property.cs" />
     <Compile Include="Notify\ICommand.cs" />
     <Compile Include="Notify\INPC.cs" />
