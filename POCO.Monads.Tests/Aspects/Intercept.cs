@@ -2,32 +2,42 @@
     using System;
     using System.Linq.Expressions;
     using System.Reflection;
+    using System.Runtime.CompilerServices;
     using NUnit.Framework;
+
     #region Test Classes
     class Foo {
+        [MethodImpl(MethodImplOptions.NoInlining)]
         public void Greet() {
             Console.WriteLine("Hello! I'm " + GetName());
         }
+        [MethodImpl(MethodImplOptions.NoInlining)]
         public string GetName() {
             return "foo";
         }
+        [MethodImpl(MethodImplOptions.NoInlining)]
         public static string GetClass() {
             return "Foo";
         }
+        [MethodImpl(MethodImplOptions.NoInlining)]
         public virtual string GetFoo() {
             return "@Foo";
         }
     }
     class Bar {
+        [MethodImpl(MethodImplOptions.NoInlining)]
         public void Greet() {
             Console.WriteLine("Hello! I'm " + GetName());
         }
+        [MethodImpl(MethodImplOptions.NoInlining)]
         public string GetName() {
             return "bar";
         }
+        [MethodImpl(MethodImplOptions.NoInlining)]
         public static string GetClass() {
             return "Bar";
         }
+        [MethodImpl(MethodImplOptions.NoInlining)]
         public virtual string GetBar() {
             return "@Bar";
         }
